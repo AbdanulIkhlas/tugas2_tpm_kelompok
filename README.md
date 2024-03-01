@@ -1,16 +1,21 @@
-# tugas2_tpm_kelompok
+# Tugas 2 TPM (Kelompok)
 
-A new Flutter project.
+Membuat aplikasi mobile sederhana yang terdiri dari :
+- Menu Login
+- Menu Data Kelompok
+- Menu Penjumlahan atau Pengurangan Angka
+- Menu Penentuan Angka Ganjil atau Genap
 
-## Getting Started
+Anggota Kelompok :
 
-This project is a starting point for a Flutter application.
+- Muhammad Abdanul Ikhlas - 123210009
+- Muhammad Harish Wijaya - 123210011
+- Yoga Agatha Pasaribu - 123210025
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h2 align="center">Tampilan</h2>
+<p align="center">
+    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image1.png" alt="Banner" width="160">
+    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image2.png" alt="Banner" width="160">
+    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image3.png" alt="Banner" width="160">
+    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image4.png" alt="Banner" width="160">
+</p>
