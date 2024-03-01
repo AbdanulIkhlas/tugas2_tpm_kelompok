@@ -14,8 +14,8 @@ Anggota Kelompok :
 
 <h2 align="center">Tampilan</h2>
 <p align="center">
-    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image1.png" alt="Banner" width="184">
+    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image1.png" alt="Banner" width="157">
     <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image2.png" alt="Banner" width="160">
     <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image3.png" alt="Banner" width="160">
-    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image4.png" alt="Banner" width="160">
+    <img src="https://github.com/AbdanulIkhlas/tugas2_tpm_kelompok/blob/main/docs/image4.png" alt="Banner" width="162">
 </p>
