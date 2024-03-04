@@ -144,15 +144,15 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.group),
+            icon: Icon(Icons.people),
             label: 'Data Kelompok',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add),
+            icon: Icon(Icons.calculate),
             label: 'Add/Subtract',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.equalizer_sharp),
+            icon: Icon(Icons.format_list_numbered),
             label: 'Odd/Even',
           ),
         ],
@@ -175,24 +175,62 @@ class _AddSubtractPageState extends State<AddSubtractPage> {
   final TextEditingController _num1Controller = TextEditingController();
   final TextEditingController _num2Controller = TextEditingController();
 
-  int _result = 0;
+  double _result = 0.0;
 
   void _calculateResult() {
-    int num1 = int.parse(_num1Controller.text);
-    int num2 = int.parse(_num2Controller.text);
+    double? num1 = double.tryParse(_num1Controller.text);
+    double? num2 = double.tryParse(_num2Controller.text);
 
-    setState(() {
-      _result = num1 + num2;
-    });
+    if (num1 != null && num2 != null) {
+      setState(() {
+        _result = num1 + num2;
+      });
+    } else {
+      // Menampilkan dialog untuk pesan kesalahan
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Error'),
+          content: Text('Invalid input! Please enter a valid number.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Menutup dialog
+              },
+              child: Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
   }
 
   void _calculateSubtractResult() {
-    int num1 = int.parse(_num1Controller.text);
-    int num2 = int.parse(_num2Controller.text);
+    double? num1 = double.tryParse(_num1Controller.text);
+    double? num2 = double.tryParse(_num2Controller.text);
 
-    setState(() {
-      _result = num1 - num2;
-    });
+    if (num1 != null && num2 != null) {
+      setState(() {
+        _result = num1 - num2;
+      });
+    } else {
+      // Menampilkan dialog untuk pesan kesalahan
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Error'),
+          content: Text('Invalid input! Please enter a valid number.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Menutup dialog
+              },
+              child: Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
   }
 
   @override
@@ -256,17 +294,17 @@ class DataKelompok extends StatelessWidget {
   final List<Map<String, dynamic>> people = [
     {
       'name': 'Muhammad Abdanul Ikhlas',
-      'age': '123210009',
+      'nim': '123210009',
       'picture': 'images/ikhlas.png'
     },
     {
       'name': 'Muhammad Harish Wijaya',
-      'age': '123210011',
+      'nim': '123210011',
       'picture': 'images/haris.jpeg'
     },
     {
       'name': 'Yoga Agatha Pasaribu',
-      'age': '123210025',
+      'nim': '123210025',
       'picture': 'images/yoga.jpeg'
     },
   ];
@@ -312,7 +350,7 @@ class DataKelompok extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                'NIM: ${people[index]['age']}',
+                                'NIM: ${people[index]['nim']}',
                                 style: TextStyle(
                                   fontSize: 14,
                                 ),
@@ -343,11 +381,30 @@ class _OddEvenPageState extends State<OddEvenPage> {
   String _result = '';
 
   void _checkOddEven() {
-    int number = int.tryParse(_numberController.text) ?? 0;
+    double? number = double.tryParse(_numberController.text);
 
-    setState(() {
-      _result = (number % 2 == 0) ? 'Even' : 'Odd';
-    });
+    if (number != null) {
+      setState(() {
+        _result = (number % 2 == 0) ? 'Even' : 'Odd';
+      });
+    } else {
+      // Menampilkan dialog untuk pesan kesalahan
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Error'),
+          content: Text('Invalid input! Please enter a valid number.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Menutup dialog
+              },
+              child: Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
   }
 
   @override
